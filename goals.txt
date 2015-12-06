@@ -1,0 +1,14 @@
+To investigate 10-12 mini notrump
+- Create lots of deals in which North has 10-12 balanced (no more than 27ish combined?)
+- Bid each one using some set of rules
+- Double Dummy play
+- Scoring
+
+Other Functionality
+- Print hands from dealer to file
+- Read hands from file
+- Read a file specifying the type of deal desired (perhaps as simple as a 
+  file with a function called check_validity that takes in a deal and 
+  returns 1 or 0. I.E, instead of having a function that reads and checks a 
+  spec sheet, we just write the function each time)
+

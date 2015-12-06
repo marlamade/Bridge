@@ -1,0 +1,50 @@
+Enum seat {No, Ea, So, We}
+Enum suit {C, D, H, S, NT}
+
+If things get messud up enough, this might be only for the DD analyzer
+with a separate class for the main stuff
+
+Class DDDeal:
+      hands[4]
+      metadata: Vulnerabiity, 
+      		Dealer
+      State of play: seat_to_play, 
+      	       	     num_cards_played = 0
+		     cards_played[4]
+		     suit_led
+		     trump
+		     declarer
+
+Play_1st_hand()
+	nodes++
+	seat_to_play = (seat_to_play+1)%4
+	num_cards_played++
+	declarertricks = inf if defending, -inf if declaring
+	**Logic to decide order of suits to try. 
+	for suit
+	    **Logic to decide order of ranks to try
+	    **Copy the array so not affected by later stuff
+	    for rank	     
+	    	hand.remove_card(suit, rank)
+		cards_played[num_cards_played] = rank if folllowing, 15+rank if trumping, 0 if discarding
+		tricks = Play_2nd_hand()
+		hand.add_card(suit, rank)
+		if (tricks> declarertricks && seat%2=declaer%2 
+		   or ...)
+		   declaertricks = tricks
+	seat_to_play = (seat_to_play -1)%4 
+	num_cards_played --
+	return declarertricks
+		   
+Play_2nd_hand() / Play_3rd hand
+	similar, but must follow suit
+
+Play_4th_hand()
+	similar,
+	tricks = Clear() + Play_1st_hand()
+
+Clear_trick()
+	num_cards_played=0
+	winning_seat = 
+	declarer_won = (winning_seat+declarer+1)%2
+	return declarer_won	
