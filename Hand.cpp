@@ -25,3 +25,16 @@ Hand::Hand()
 {
   return;
 }
+
+void Hand::add_card(suit st, string rank)
+{
+  cards[st].append(string(rank));
+  //sort?
+}
+
+void Hand::remove_card(suit st, string rank)
+{
+  int pos = cards[st].find(rank);
+  cards[st].erase(pos,1);
+}
+

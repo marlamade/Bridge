@@ -6,7 +6,8 @@ using namespace std;
 
 class Deal
 {
- private:
+  // private:
+ public:
   Hand hand[4];
   //metadata
   int vulnerability;

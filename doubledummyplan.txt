@@ -1,7 +1,7 @@
 Enum seat {No, Ea, So, We}
 Enum suit {C, D, H, S, NT}
 
-If things get messud up enough, this might be only for the DD analyzer
+If things get messed up enough, this might be only for the DD analyzer
 with a separate class for the main stuff
 
 Class DDDeal:
